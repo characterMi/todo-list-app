@@ -7,3 +7,5 @@
 to do list app with `JS`
 
 it uses local storage and create a box that includes our To Do work ! 
+
+to see the demo, click right [Here](https://charactermi.github.io/todo-list-app)
