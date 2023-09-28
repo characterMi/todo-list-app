@@ -4,7 +4,10 @@
   box-sizing: border-box;
 }
 
-/*  */
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: #fff;
   color: #5f76a0;
@@ -79,13 +82,28 @@ form button:hover {
 }
 
 .todo-list {
-  min-width: 30%;
+  min-width: 350px;
   list-style: none;
+  border-radius: 10px;
+  overflow: auto;
+  height: 400px
+}
+
+.todo-list::-webkit-scrollbar, .todo::-webkit-scrollbar {
+  width: 8px;
+  background-color: #021e58;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px #000816;
+}
+
+.todo-list::-webkit-scrollbar-thumb, .todo::-webkit-scrollbar-thumb {
+  background-color: #264a88;
+  box-shadow: inset 0 0 5px #000816;
   border-radius: 10px;
 }
 
 .todo {
-  margin: 0.5rem;
+  margin: 0.5rem auto;
   font-size: 1.5rem;
   color: #fff;
   display: flex;
@@ -96,6 +114,8 @@ form button:hover {
     -5px -5px 5px #98bdff;
   transition: all 1s ease;
   border-radius: 5px;
+  overflow: auto;
+  width: 300px;
 }
 
 .filter-todo {
