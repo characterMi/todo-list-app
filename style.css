@@ -1,17 +1,31 @@
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/*  */
 body {
   background: #fff;
-  color: #fff3f4;
+  color: #5f76a0;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
 }
+
+body img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 header {
   font-size: 2rem;
-  text-shadow: 3px 1px 2px rgb(93, 122, 93);
+  text-shadow: 3px 1px 2px #fff;
 }
 
 header,
@@ -21,33 +35,43 @@ form {
   justify-content: center;
   align-items: center;
 }
+
 form input,
 form button {
   padding: 0.5rem;
   font-size: 2rem;
   border: none;
-  background: #fff3f4;
-  box-shadow: 0 0 20px #ddd;
+  background: linear-gradient(145deg, #16294d, #1a315b);
+  box-shadow: 2px 5px 5px #0a1222,
+    2px -5px 5px #264a88;
 }
+
 form input {
-   border-top-left-radius: 10px;
-   border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
+
 form button {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
 form button {
   color: #fff;
-  background: #ff2625;
+  background: linear-gradient(145deg, #01143b, #011132);
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 0 20px #ddd;
+  box-shadow: 2px 5px 5px #000816,
+    2px -5px 5px #021e58;
 }
+
 form button:hover {
-  background: #fff;
-  color: #ff2625;
+  background: linear-gradient(145deg, #566a90, #667eab);
+  box-shadow: 2px 5px 5px #262f40,
+    2px -5px 5px #98bdff;
+  color: #0a1222;
 }
+
 .todo-container {
   display: flex;
   justify-content: center;
@@ -59,36 +83,44 @@ form button:hover {
   list-style: none;
   border-radius: 10px;
 }
+
 .todo {
   margin: 0.5rem;
-  background: white;
   font-size: 1.5rem;
-  color: black;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff3f4;
+  background: transparent;
+  box-shadow: 5px 5px 5px #262f40,
+    -5px -5px 5px #98bdff;
   transition: all 1s ease;
+  border-radius: 5px;
 }
+
 .filter-todo {
   padding: 1rem;
 }
+
 .todo li {
   flex: 1;
 }
 
 .trash-btn,
 .complete-btn {
-  background: #f83a3a;
+  background: transparent;
   color: white;
   border: none;
   padding: 1rem;
   cursor: pointer;
   font-size: 1rem;
 }
+
 .complete-btn {
-  background: rgb(11, 212, 162);
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
 }
+
 .todo-item {
   padding: 0rem 0.5rem;
 }
@@ -102,6 +134,7 @@ form button:hover {
   text-decoration: line-through;
   opacity: 0.5;
 }
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -112,25 +145,27 @@ select {
   border: 0 !important;
   background-image: none;
   border-radius: 10px;
-  color: #ff2625;
+  color: #5f76a0;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   width: 12rem;
-  background-color: #fff3f4;
+  background-color: #fff;
 }
+
 .select {
   margin: 1rem;
   position: relative;
   overflow: hidden;
 }
+
 .select::after {
   content: "\25BC";
   position: absolute;
   top: 0;
   right: 0;
   padding: 1rem;
-  background: #ff2625;
-  color: #000;
+  background: #5f76a0;
+  color: #0a1222;
   cursor: pointer;
   pointer-events: none;
 }
